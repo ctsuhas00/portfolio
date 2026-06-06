@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,187 +10,415 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script>
+
+function toggleSection(id){
+
+const section = document.getElementById(id);
+
+if(section.style.display === "block"){
+
+section.style.display = "none";
+
+}else{
+
+section.style.display = "block";
+
+}
+
+}
+
+</script>
+
 </head>
+
 <body>
+
+<!-- CONTACT BUTTON -->
+
+<a href="contact.html" class="contact-btn">
+Contact Me
+</a>
+
+<!-- HEADER -->
 
 <header>
 
-    <div class="logo">
-        CT SUHAS PORTFOLIO
-    </div>
+<h1>
+WELCOME TO CT SUHAS PORTFOLIO
+</h1>
 
-    <nav>
+<p class="subtitle">
 
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#internships">Internships</a>
-        <a href="#hobbies">Hobbies</a>
+Electronics Engineer • Innovator • Entrepreneur
 
-    </nav>
+</p>
 
 </header>
 
-<section class="hero">
+<!-- MAIN CONTENT -->
 
-    <div class="hero-left">
+<section class="container">
 
-        <h1>
-            Welcome to <br>
-            CT Suhas Portfolio
-        </h1>
+<div class="left-content">
 
-        <p>
-            Electronics & Communication Engineering Student,
-            Innovator, IoT Enthusiast and Future Entrepreneur.
-        </p>
+<!-- ABOUT -->
 
-    </div>
+<section>
 
-    <div class="hero-right">
+<h2>About Me</h2>
 
-        <a href="contact.html" class="contact-btn">
-            Contact Me
-        </a>
+<p>
 
-    </div>
+I am CT Suhas, an Electronics and Communication Engineering
+student passionate about innovation, embedded systems,
+IoT technologies and entrepreneurship.
 
-</section>
+My goal is to create impactful technologies that solve
+real-world problems and contribute to society through
+engineering excellence.
 
-<section id="about" class="content-section">
-
-    <h2>About Me</h2>
-
-    <p>
-        I am a passionate Electronics and Communication
-        Engineering student with a strong interest in
-        innovation, embedded systems, IoT technologies,
-        product development and entrepreneurship.
-
-        My goal is to create impactful technologies
-        that solve real-world challenges.
-    </p>
+</p>
 
 </section>
 
-<section id="education" class="content-section">
+<!-- EDUCATION -->
 
-    <h2>Educational Journey</h2>
+<section>
 
-    <div class="card">
+<h2>Education Journey</h2>
 
-        <h3>NMAM Institute of Technology</h3>
+<button
+class="accordion"
+onclick="toggleSection('edu1')">
 
-        <p>
-            Bachelor of Technology in Electronics &
-            Communication Engineering (2023-2027)
-        </p>
+NMAM Institute of Technology
 
-    </div>
+</button>
 
-    <div class="card">
+<div id="edu1" class="details">
 
-        <h3>Sharada PU College</h3>
+<p>
 
-        <p>
-            PUC (2021-2023)
-        </p>
+Bachelor of Technology
+(Electronics & Communication Engineering)
 
-    </div>
+<br><br>
 
-    <div class="card">
+2023 - 2027
 
-        <h3>St Michael's School</h3>
+<br><br>
 
-        <p>
-            SSLC (2021)
-        </p>
+Nitte, Karkala
 
-    </div>
+</p>
 
-</section>
+</div>
 
-<section id="skills" class="content-section">
+<button
+class="accordion"
+onclick="toggleSection('edu2')">
 
-    <h2>Skills</h2>
+Sharada PU College
 
-    <div class="skills-grid">
+</button>
 
-        <div class="skill">Python</div>
-        <div class="skill">C Programming</div>
-        <div class="skill">IoT</div>
-        <div class="skill">ESP32</div>
-        <div class="skill">Arduino</div>
-        <div class="skill">Verilog</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Soldering</div>
+<div id="edu2" class="details">
 
-    </div>
+<p>
 
-</section>
+PUC
 
-<section id="internships" class="content-section">
+<br><br>
 
-    <h2>Internships</h2>
+2021 - 2023
 
-    <button class="accordion">
-        Experimind Labs Pvt Ltd
-    </button>
+<br><br>
 
-    <div class="panel">
+Mangalore
 
-        <p>
-            Electronics Product Development Intern.
+</p>
 
-            Worked on product development,
-            circuit implementation,
-            and engineering problem solving.
-        </p>
+</div>
 
-    </div>
+<button
+class="accordion"
+onclick="toggleSection('edu3')">
 
-    <button class="accordion">
-        JAXA Space Agency Study
-    </button>
+St Michael's School
 
-    <div class="panel">
+</button>
 
-        <p>
-            Studied development,
-            mission success rates,
-            and technological advancements
-            of the JAXA space agency.
-        </p>
+<div id="edu3" class="details">
 
-    </div>
+<p>
+
+SSLC
+
+<br><br>
+
+2021
+
+<br><br>
+
+Madikeri
+
+</p>
+
+</div>
 
 </section>
 
-<section id="hobbies" class="content-section">
+<!-- SKILLS -->
 
-    <h2>Hobbies & Interests</h2>
+<section>
 
-    <ul>
+<h2>Skills</h2>
 
-        <li>Technology Exploration</li>
-        <li>Innovation Projects</li>
-        <li>Craft Work</li>
-        <li>Arduino Experimentation</li>
-        <li>Product Design</li>
+<div class="skills">
 
-    </ul>
+<div class="skill-item">Python</div>
+
+<div class="skill-item">C Programming</div>
+
+<div class="skill-item">Internet of Things (IoT)</div>
+
+<div class="skill-item">ESP32 Development</div>
+
+<div class="skill-item">Arduino</div>
+
+<div class="skill-item">Verilog</div>
+
+<div class="skill-item">Data Analysis</div>
+
+<div class="skill-item">Soldering</div>
+
+<div class="skill-item">Project Presentation</div>
+
+<div class="skill-item">Technical Leadership</div>
+
+</div>
 
 </section>
 
-<footer>
+<!-- INTERNSHIPS -->
 
-    <p>
-        © 2026 CT Suhas Portfolio
-    </p>
+<section>
 
-</footer>
+<h2>Internships</h2>
 
-<script src="script.js"></script>
+<button
+class="accordion"
+onclick="toggleSection('intern1')">
+
+Experimind Labs Pvt Ltd
+
+</button>
+
+<div id="intern1" class="details">
+
+<p>
+
+Electronics Product Development Intern.
+
+Worked on:
+
+• Product Development
+
+• Circuit Implementation
+
+• Hardware Testing
+
+• Engineering Problem Solving
+
+• Practical Electronics Applications
+
+</p>
+
+</div>
+
+<button
+class="accordion"
+onclick="toggleSection('intern2')">
+
+JAXA Space Agency Study
+
+</button>
+
+<div id="intern2" class="details">
+
+<p>
+
+Studied:
+
+• Mission Success Rates
+
+• Space Technology Development
+
+• Mission Failures & Improvements
+
+• Future Space Innovations
+
+</p>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section>
+
+<h2>Projects</h2>
+
+<button
+class="accordion"
+onclick="toggleSection('project1')">
+
+Automated Baby Cradle
+
+</button>
+
+<div id="project1" class="details">
+
+<p>
+
+ESP32 based smart cradle capable of detecting
+baby cries and automatically rocking the cradle
+to comfort infants.
+
+</p>
+
+</div>
+
+<button
+class="accordion"
+onclick="toggleSection('project2')">
+
+Driver Drowsiness Detection System
+
+</button>
+
+<div id="project2" class="details">
+
+<p>
+
+Wearable safety system that detects
+driver sleepiness and provides emergency alerts.
+
+</p>
+
+</div>
+
+<button
+class="accordion"
+onclick="toggleSection('project3')">
+
+Line Follower Robot
+
+</button>
+
+<div id="project3" class="details">
+
+<p>
+
+Arduino based autonomous robot using IR sensors
+for path detection and navigation.
+
+</p>
+
+</div>
+
+<button
+class="accordion"
+onclick="toggleSection('project4')">
+
+Sudoku Solver
+
+</button>
+
+<div id="project4" class="details">
+
+<p>
+
+Python program capable of solving Sudoku puzzles
+using a backtracking algorithm.
+
+</p>
+
+</div>
+
+<button
+class="accordion"
+onclick="toggleSection('project5')">
+
+Password Detection System
+
+</button>
+
+<div id="project5" class="details">
+
+<p>
+
+FSM based digital password detection
+implemented using Verilog.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+
+<section>
+
+<h2>Hobbies & Interests</h2>
+
+<div class="skills">
+
+<div class="skill-item">
+Technology Exploration
+</div>
+
+<div class="skill-item">
+Hobby Projects
+</div>
+
+<div class="skill-item">
+Innovation & Product Design
+</div>
+
+<div class="skill-item">
+Craft Work
+</div>
+
+<div class="skill-item">
+Leadership Activities
+</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section>
+
+<a href="assets/resume.pdf"
+download
+class="resume-btn">
+
+Download Resume
+
+</a>
+
+</section>
+
+</div>
+
+</section>
 
 </body>
+
 </html>
