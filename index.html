@@ -1,43 +1,194 @@
-<section id="contact" class="section">
-    <h2>Let's Connect</h2>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CT Suhas | Portfolio</title>
 
-    <p class="contact-text">
-        Interested in collaborating, discussing projects, internships,
-        or innovative ideas? Feel free to send me a message.
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>CT Suhas</h2>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>CT Suhas</h1>
+
+    <h3>
+        Electronics & Communication Engineering Student
+    </h3>
+
+    <p>
+        IoT • Embedded Systems • Product Development • Innovation
     </p>
 
-    <form
-        class="contact-form"
-        action="https://formspree.io/f/mdavabdr"
-        method="POST">
+    <div class="buttons">
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required>
+        <a href="assets/resume.pdf"
+           class="btn"
+           download>
+            Download Resume
+        </a>
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            required>
+        <a href="contact.html"
+           class="btn secondary">
+            Contact Me
+        </a>
 
-        <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required>
+    </div>
 
-        <textarea
-            name="message"
-            rows="6"
-            placeholder="Write your message here..."
-            required></textarea>
-
-        <button type="submit">
-            Send Message
-        </button>
-
-    </form>
 </section>
+
+<section id="about" class="section">
+
+    <h2>About Me</h2>
+
+    <p>
+        Motivated Electronics and Communication Engineering student
+        passionate about innovation, embedded systems,
+        electronics product development and solving real-world
+        challenges through technology.
+    </p>
+
+</section>
+
+<section id="skills" class="section">
+
+    <h2>Technical Skills</h2>
+
+    <div class="cards">
+
+        <div class="card">Python</div>
+        <div class="card">C Programming</div>
+        <div class="card">IoT</div>
+        <div class="card">ESP32</div>
+        <div class="card">Arduino</div>
+        <div class="card">Verilog</div>
+        <div class="card">Data Analysis</div>
+        <div class="card">Soldering</div>
+
+    </div>
+
+</section>
+
+<section id="projects" class="section">
+
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project">
+            <h3>Automated Baby Cradle</h3>
+            <p>
+                ESP32 based smart cradle that detects baby cries
+                and automatically rocks the cradle.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Driver Drowsiness Detection</h3>
+            <p>
+                Wearable system that detects sleepiness and
+                triggers emergency alerts.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Line Follower Robot</h3>
+            <p>
+                Arduino based autonomous robot using IR sensors.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Sudoku Solver</h3>
+            <p>
+                Python program implementing backtracking algorithm.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Password Detection System</h3>
+            <p>
+                FSM based digital security system using Verilog.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="experience" class="section">
+
+    <h2>Experience</h2>
+
+    <div class="timeline">
+
+        <div class="item">
+            <h3>Experimind Labs Pvt Ltd</h3>
+            <p>
+                Electronics Product Development Intern
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>JAXA Space Agency Study</h3>
+            <p>
+                Internship & Research Study
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="education" class="section">
+
+    <h2>Education</h2>
+
+    <div class="timeline">
+
+        <div class="item">
+            <h3>NMAM Institute of Technology</h3>
+            <p>B.Tech - ECE</p>
+        </div>
+
+        <div class="item">
+            <h3>Sharada PU College</h3>
+        </div>
+
+        <div class="item">
+            <h3>St Michael's School</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 CT Suhas | Portfolio
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
