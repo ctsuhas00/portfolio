@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact CT Suhas</title>
 
@@ -10,64 +14,83 @@
 
 <body>
 
+<!-- FIXED NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+CT SUHAS
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+</ul>
+
+</nav>
+
 <header>
 
-    <div class="logo">
-        CT SUHAS PORTFOLIO
-    </div>
+<h1>
+CONTACT ME
+</h1>
 
-    <nav>
+<p class="subtitle">
 
-        <a href="index.html">
-            Home
-        </a>
+Let's connect and build something amazing together.
 
-    </nav>
+</p>
 
 </header>
 
-<section class="content-section">
+<div class="container">
 
-    <h2>Contact Me</h2>
+<section class="content-card">
 
-    <form
-        class="contact-form"
-        action="https://formspree.io/f/mdavabdr"
-        method="POST">
+<h2>Send a Message</h2>
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required>
+<form
+action="https://formspree.io/f/mdavabdr"
+method="POST"
+class="contact-form">
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Your Gmail ID"
-            required>
+<input
+type="text"
+name="name"
+placeholder="Your Full Name"
+required>
 
-        <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required>
+<input
+type="email"
+name="email"
+placeholder="Your Email Address"
+required>
 
-        <textarea
-            name="message"
-            rows="6"
-            placeholder="Write your message..."
-            required></textarea>
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
 
-        <button type="submit">
+<textarea
+name="message"
+rows="8"
+placeholder="Write your message here..."
+required></textarea>
 
-            Send Message
+<button type="submit">
 
-        </button>
+Send Message
 
-    </form>
+</button>
+
+</form>
 
 </section>
 
+</div>
+
 </body>
+
 </html>
