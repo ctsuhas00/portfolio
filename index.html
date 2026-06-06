@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,14 +14,18 @@
 
 function toggleSection(id){
 
-    const section = document.getElementById(id);
+const section = document.getElementById(id);
 
-    if(section.style.display === "block"){
-        section.style.display = "none";
-    }
-    else{
-        section.style.display = "block";
-    }
+if(section.style.display === "block"){
+
+section.style.display = "none";
+
+}else{
+
+section.style.display = "block";
+
+}
+
 }
 
 </script>
@@ -29,382 +34,416 @@ function toggleSection(id){
 
 <body>
 
+<!-- NAVIGATION BAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+CT SUHAS
+</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#internships">Internships</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#hobbies">Hobbies</a></li>
+
+</ul>
+
+</nav>
+
 <!-- CONTACT BUTTON -->
 
 <a href="contact.html" class="contact-btn">
-    Contact Me
+Contact Me
 </a>
 
 <!-- HEADER -->
 
 <header>
 
-    <h1>WELCOME TO CT SUHAS PORTFOLIO</h1>
+<h1>
+WELCOME TO CT SUHAS PORTFOLIO
+</h1>
 
-    <p class="subtitle">
-        Electronics Engineer • Innovator • Entrepreneur
-    </p>
+<p class="subtitle">
+
+Electronics Engineer • Innovator • Entrepreneur
+
+</p>
 
 </header>
 
-<!-- MAIN CONTENT -->
-
 <div class="container">
 
-    <!-- ABOUT -->
+<!-- ABOUT -->
 
-    <section>
+<section id="about" class="content-card">
 
-        <h2>About Me</h2>
+<h2>About Me</h2>
 
-        <p>
-            I am CT Suhas, an Electronics and Communication Engineering
-            student passionate about innovation, embedded systems,
-            IoT technologies, entrepreneurship and product development.
+<p>
 
-            My goal is to build impactful technologies that solve
-            real-world problems and contribute to society through
-            engineering excellence.
-        </p>
+I am CT Suhas, an Electronics and Communication Engineering
+student passionate about innovation, embedded systems,
+IoT technologies, entrepreneurship and product development.
 
-    </section>
+My goal is to build impactful technologies that solve
+real-world problems and contribute to society through
+engineering excellence.
 
-    <!-- EDUCATION -->
+</p>
 
-    <section>
+</section>
 
-        <h2>Education Journey</h2>
+<!-- EDUCATION -->
 
-        <button class="accordion"
-        onclick="toggleSection('edu1')">
+<section id="education" class="content-card">
 
-        NMAM Institute of Technology
+<h2>Education Journey</h2>
 
-        </button>
+<button class="accordion"
+onclick="toggleSection('edu1')">
 
-        <div id="edu1" class="details">
+NMAM Institute of Technology
 
-            <p>
+</button>
 
-            Bachelor of Technology
+<div id="edu1" class="details">
 
-            <br>
+<p>
 
-            Electronics & Communication Engineering
+Bachelor of Technology
 
-            <br><br>
+<br>
 
-            2023 - 2027
+Electronics & Communication Engineering
 
-            <br>
+<br><br>
 
-            Nitte, Karkala
+2023 - 2027
 
-            </p>
+<br>
 
-        </div>
+Nitte, Karkala
 
-
-        <button class="accordion"
-        onclick="toggleSection('edu2')">
-
-        Sharada PU College
-
-        </button>
-
-        <div id="edu2" class="details">
-
-            <p>
-
-            PUC
-
-            <br><br>
-
-            2021 - 2023
-
-            <br>
-
-            Mangalore
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('edu3')">
-
-        St Michael's School
-
-        </button>
-
-        <div id="edu3" class="details">
-
-            <p>
-
-            SSLC
-
-            <br><br>
-
-            2021
-
-            <br>
-
-            Madikeri
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-
-    <section>
-
-        <h2>Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill-item">Python</div>
-
-            <div class="skill-item">C Programming</div>
-
-            <div class="skill-item">Internet of Things (IoT)</div>
-
-            <div class="skill-item">ESP32</div>
-
-            <div class="skill-item">Arduino</div>
-
-            <div class="skill-item">Verilog</div>
-
-            <div class="skill-item">Data Analysis</div>
-
-            <div class="skill-item">Soldering</div>
-
-            <div class="skill-item">Project Presentation</div>
-
-            <div class="skill-item">Leadership</div>
-
-        </div>
-
-    </section>
-
-    <!-- INTERNSHIPS -->
-
-    <section>
-
-        <h2>Internships</h2>
-
-        <button class="accordion"
-        onclick="toggleSection('intern1')">
-
-        Experimind Labs Pvt Ltd
-
-        </button>
-
-        <div id="intern1" class="details">
-
-            <p>
-
-            Electronics Product Development Intern.
-
-            <br><br>
-
-            Worked on:
-
-            <br>
-
-            • Product Development
-
-            <br>
-
-            • Circuit Implementation
-
-            <br>
-
-            • Hardware Testing
-
-            <br>
-
-            • Engineering Problem Solving
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('intern2')">
-
-        JAXA Space Agency Study
-
-        </button>
-
-        <div id="intern2" class="details">
-
-            <p>
-
-            Studied mission success rates,
-            mission failures and technological
-            advancements of JAXA.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section>
-
-        <h2>Projects</h2>
-
-        <button class="accordion"
-        onclick="toggleSection('project1')">
-
-        Automated Baby Cradle
-
-        </button>
-
-        <div id="project1" class="details">
-
-            <p>
-
-            ESP32 based smart cradle capable of
-            detecting baby cries and automatically
-            rocking the cradle.
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('project2')">
-
-        Driver Drowsiness Detection System
-
-        </button>
-
-        <div id="project2" class="details">
-
-            <p>
-
-            Wearable safety system that detects
-            sleepiness and triggers alerts.
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('project3')">
-
-        Line Follower Robot
-
-        </button>
-
-        <div id="project3" class="details">
-
-            <p>
-
-            Arduino based autonomous robot
-            using IR sensors.
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('project4')">
-
-        Sudoku Solver
-
-        </button>
-
-        <div id="project4" class="details">
-
-            <p>
-
-            Python based Sudoku solver using
-            backtracking algorithm.
-
-            </p>
-
-        </div>
-
-
-        <button class="accordion"
-        onclick="toggleSection('project5')">
-
-        Password Detection System
-
-        </button>
-
-        <div id="project5" class="details">
-
-            <p>
-
-            FSM based password detection
-            circuit implemented using Verilog.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- HOBBIES -->
-
-    <section>
-
-        <h2>Hobbies & Interests</h2>
-
-        <div class="skills">
-
-            <div class="skill-item">
-                Technology Exploration
-            </div>
-
-            <div class="skill-item">
-                Hobby Projects
-            </div>
-
-            <div class="skill-item">
-                Innovation & Product Design
-            </div>
-
-            <div class="skill-item">
-                Craft Work
-            </div>
-
-            <div class="skill-item">
-                Leadership Activities
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- RESUME -->
-
-    <section>
-
-        <a href="assets/resume.pdf"
-        download
-        class="resume-btn">
-
-        Download Resume
-
-        </a>
-
-    </section>
+</p>
 
 </div>
+
+<button class="accordion"
+onclick="toggleSection('edu2')">
+
+Sharada PU College
+
+</button>
+
+<div id="edu2" class="details">
+
+<p>
+
+PUC
+
+<br><br>
+
+2021 - 2023
+
+<br>
+
+Mangalore
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('edu3')">
+
+St Michael's School
+
+</button>
+
+<div id="edu3" class="details">
+
+<p>
+
+SSLC
+
+<br><br>
+
+2021
+
+<br>
+
+Madikeri
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="content-card">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill-item">Python</div>
+
+<div class="skill-item">C Programming</div>
+
+<div class="skill-item">Internet of Things (IoT)</div>
+
+<div class="skill-item">ESP32</div>
+
+<div class="skill-item">Arduino</div>
+
+<div class="skill-item">Verilog</div>
+
+<div class="skill-item">Data Analysis</div>
+
+<div class="skill-item">Soldering</div>
+
+<div class="skill-item">Project Presentation</div>
+
+<div class="skill-item">Leadership</div>
+
+</div>
+
+</section>
+
+<!-- INTERNSHIPS -->
+
+<section id="internships" class="content-card">
+
+<h2>Internships</h2>
+
+<button class="accordion"
+onclick="toggleSection('intern1')">
+
+Experimind Labs Pvt Ltd
+
+</button>
+
+<div id="intern1" class="details">
+
+<p>
+
+Electronics Product Development Intern
+
+<br><br>
+
+Worked on:
+
+<br>
+
+• Product Development
+
+<br>
+
+• Circuit Implementation
+
+<br>
+
+• Hardware Testing
+
+<br>
+
+• Engineering Problem Solving
+
+<br>
+
+• Practical Electronics Applications
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('intern2')">
+
+JAXA Space Agency Study
+
+</button>
+
+<div id="intern2" class="details">
+
+<p>
+
+Studied mission success rates,
+mission failures and technological
+advancements of JAXA space missions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="content-card">
+
+<h2>Projects</h2>
+
+<button class="accordion"
+onclick="toggleSection('project1')">
+
+Automated Baby Cradle
+
+</button>
+
+<div id="project1" class="details">
+
+<p>
+
+ESP32 based smart cradle capable of
+detecting baby cries and automatically
+rocking the cradle to comfort infants.
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('project2')">
+
+Driver Drowsiness Detection System
+
+</button>
+
+<div id="project2" class="details">
+
+<p>
+
+Smart wearable system that detects
+driver sleepiness and provides
+emergency alerts for road safety.
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('project3')">
+
+Line Follower Robot
+
+</button>
+
+<div id="project3" class="details">
+
+<p>
+
+Arduino based autonomous robot
+using IR sensors for path tracking
+and navigation.
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('project4')">
+
+Sudoku Solver
+
+</button>
+
+<div id="project4" class="details">
+
+<p>
+
+Python program capable of solving
+Sudoku puzzles using a backtracking
+algorithm.
+
+</p>
+
+</div>
+
+<button class="accordion"
+onclick="toggleSection('project5')">
+
+Password Detection System
+
+</button>
+
+<div id="project5" class="details">
+
+<p>
+
+FSM based digital password detection
+system implemented using Verilog.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+
+<section id="hobbies" class="content-card">
+
+<h2>Hobbies & Interests</h2>
+
+<div class="skills">
+
+<div class="skill-item">
+Technology Exploration
+</div>
+
+<div class="skill-item">
+Hobby Projects
+</div>
+
+<div class="skill-item">
+Innovation & Product Design
+</div>
+
+<div class="skill-item">
+Craft Work
+</div>
+
+<div class="skill-item">
+Leadership Activities
+</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section class="content-card">
+
+<h2>Resume</h2>
+
+<a href="assets/resume.pdf"
+download
+class="resume-btn">
+
+Download Resume
+
+</a>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 
