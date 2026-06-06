@@ -1,194 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CT Suhas Portfolio</title>
+<title>Contact CT Suhas</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
+
+<a href="index.html" class="contact-btn">
+    Home
+</a>
 
 <header>
 
-    <div class="logo">
-        CT SUHAS PORTFOLIO
-    </div>
+    <h1>CONTACT ME</h1>
 
-    <nav>
-
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#internships">Internships</a>
-        <a href="#hobbies">Hobbies</a>
-
-    </nav>
+    <p class="subtitle">
+        Let's discuss projects, internships, opportunities,
+        or innovative ideas.
+    </p>
 
 </header>
 
-<section class="hero">
+<div class="container">
 
-    <div class="hero-left">
+    <section>
 
-        <h1>
-            Welcome to <br>
-            CT Suhas Portfolio
-        </h1>
+        <h2>Send a Message</h2>
 
-        <p>
-            Electronics & Communication Engineering Student,
-            Innovator, IoT Enthusiast and Future Entrepreneur.
-        </p>
+        <form
+            action="https://formspree.io/f/mdavabdr"
+            method="POST"
+            class="contact-form">
 
-    </div>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Full Name"
+                required>
 
-    <div class="hero-right">
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Gmail Address"
+                required>
 
-        <a href="contact.html" class="contact-btn">
-            Contact Me
-        </a>
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
 
-    </div>
+            <textarea
+                name="message"
+                rows="8"
+                placeholder="Write your message here..."
+                required></textarea>
 
-</section>
+            <button type="submit">
+                Send Message
+            </button>
 
-<section id="about" class="content-section">
+        </form>
 
-    <h2>About Me</h2>
+    </section>
 
-    <p>
-        I am a passionate Electronics and Communication
-        Engineering student with a strong interest in
-        innovation, embedded systems, IoT technologies,
-        product development and entrepreneurship.
-
-        My goal is to create impactful technologies
-        that solve real-world challenges.
-    </p>
-
-</section>
-
-<section id="education" class="content-section">
-
-    <h2>Educational Journey</h2>
-
-    <div class="card">
-
-        <h3>NMAM Institute of Technology</h3>
-
-        <p>
-            Bachelor of Technology in Electronics &
-            Communication Engineering (2023-2027)
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h3>Sharada PU College</h3>
-
-        <p>
-            PUC (2021-2023)
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h3>St Michael's School</h3>
-
-        <p>
-            SSLC (2021)
-        </p>
-
-    </div>
-
-</section>
-
-<section id="skills" class="content-section">
-
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-        <div class="skill">Python</div>
-        <div class="skill">C Programming</div>
-        <div class="skill">IoT</div>
-        <div class="skill">ESP32</div>
-        <div class="skill">Arduino</div>
-        <div class="skill">Verilog</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Soldering</div>
-
-    </div>
-
-</section>
-
-<section id="internships" class="content-section">
-
-    <h2>Internships</h2>
-
-    <button class="accordion">
-        Experimind Labs Pvt Ltd
-    </button>
-
-    <div class="panel">
-
-        <p>
-            Electronics Product Development Intern.
-
-            Worked on product development,
-            circuit implementation,
-            and engineering problem solving.
-        </p>
-
-    </div>
-
-    <button class="accordion">
-        JAXA Space Agency Study
-    </button>
-
-    <div class="panel">
-
-        <p>
-            Studied development,
-            mission success rates,
-            and technological advancements
-            of the JAXA space agency.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="hobbies" class="content-section">
-
-    <h2>Hobbies & Interests</h2>
-
-    <ul>
-
-        <li>Technology Exploration</li>
-        <li>Innovation Projects</li>
-        <li>Craft Work</li>
-        <li>Arduino Experimentation</li>
-        <li>Product Design</li>
-
-    </ul>
-
-</section>
-
-<footer>
-
-    <p>
-        © 2026 CT Suhas Portfolio
-    </p>
-
-</footer>
-
-<script src="script.js"></script>
+</div>
 
 </body>
+
 </html>
