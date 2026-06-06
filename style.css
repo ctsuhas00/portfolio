@@ -278,4 +278,12 @@ header h1{
         padding:12px 16px;
     }
 
-}
+    }
+    #about,
+    #education,
+    #skills,
+    #internships,
+    #projects,
+    #hobbies{
+        scroll-margin-top:120px;
+    }
