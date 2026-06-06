@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact CT Suhas</title>
 
@@ -10,64 +14,66 @@
 
 <body>
 
+<a href="index.html" class="contact-btn">
+    Home
+</a>
+
 <header>
 
-    <div class="logo">
-        CT SUHAS PORTFOLIO
-    </div>
+    <h1>CONTACT ME</h1>
 
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-    </nav>
+    <p class="subtitle">
+        Let's discuss projects, internships, opportunities,
+        or innovative ideas.
+    </p>
 
 </header>
 
-<section class="content-section">
+<div class="container">
 
-    <h2>Contact Me</h2>
+    <section>
 
-    <form
-        class="contact-form"
-        action="https://formspree.io/f/mdavabdr"
-        method="POST">
+        <h2>Send a Message</h2>
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required>
+        <form
+            action="https://formspree.io/f/mdavabdr"
+            method="POST"
+            class="contact-form">
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Your Gmail ID"
-            required>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Full Name"
+                required>
 
-        <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Gmail Address"
+                required>
 
-        <textarea
-            name="message"
-            rows="6"
-            placeholder="Write your message..."
-            required></textarea>
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
 
-        <button type="submit">
+            <textarea
+                name="message"
+                rows="8"
+                placeholder="Write your message here..."
+                required></textarea>
 
-            Send Message
+            <button type="submit">
+                Send Message
+            </button>
 
-        </button>
+        </form>
 
-    </form>
+    </section>
 
-</section>
+</div>
 
 </body>
+
 </html>

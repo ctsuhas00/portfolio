@@ -1,26 +1,67 @@
-const accordions =
-document.querySelectorAll(".accordion");
+// ================================
+// CT SUHAS PORTFOLIO SCRIPT
+// ================================
 
-accordions.forEach(button => {
+document.addEventListener("DOMContentLoaded", function () {
 
-button.addEventListener("click", () => {
+    // Fade-in animation for sections
 
-button.classList.toggle("active");
+    const sections = document.querySelectorAll("section");
 
-const panel =
-button.nextElementSibling;
+    const observer = new IntersectionObserver(
 
-if(panel.style.display === "block"){
+        (entries) => {
 
-panel.style.display = "none";
+            entries.forEach((entry) => {
 
-}
-else{
+                if (entry.isIntersecting) {
 
-panel.style.display = "block";
+                    entry.target.classList.add("show");
 
-}
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.1
+        }
+
+    );
+
+    sections.forEach((section) => {
+
+        section.classList.add("hidden");
+
+        observer.observe(section);
+
+    });
 
 });
 
-});
+// =================================
+// EDUCATION / INTERNSHIP / PROJECTS
+// =================================
+
+function toggleSection(id) {
+
+    const section = document.getElementById(id);
+
+    if (!section) return;
+
+    if (
+        section.style.display === "block"
+    ) {
+
+        section.style.display = "none";
+
+    } else {
+
+        section.style.display = "block";
+
+    }
+
+}
+
+console.log("CT Suhas Portfolio Loaded Successfully");
