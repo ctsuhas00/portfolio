@@ -306,3 +306,40 @@ h6 {
 .contact-info p {
     color: #526d4a; /* Dark green color */
 }
+
+
+.resume-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.resume-btn{
+
+    display:inline-block;
+
+    background:#556B4F;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+.resume-btn:hover{
+
+    background:#44543F;
+
+}
