@@ -281,9 +281,28 @@ header h1{
     }
     #about,
     #education,
-    #skills,
     #internships,
+    #skills,
     #projects,
     #hobbies{
         scroll-margin-top:120px;
     }
+
+p {
+    text-align: justify;
+}
+
+h6 {
+    text-align: center;
+}
+.tagline {
+    text-align: center;
+    font-size: 1.75rem;      /* Increase size */
+    font-weight: 300;
+    color: white;     /* Make it slightly bold */
+    margin: 15px 0;
+}
+
+.contact-info p {
+    color: #526d4a; /* Dark green color */
+}

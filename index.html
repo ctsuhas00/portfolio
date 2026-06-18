@@ -47,9 +47,9 @@ C T SUHAS
 
 <li><a href="#education">Education</a></li>
 
-<li><a href="#skills">Skills</a></li>
-
 <li><a href="#internships">Internships</a></li>
+
+<li><a href="#skills">Skills</a></li>
 
 <li><a href="#projects">Projects</a></li>
 
@@ -73,7 +73,7 @@ WELCOME TO C T SUHAS's PORTFOLIO
 
 <p class="subtitle">
 
-Electronics Engineer • Innovator • Entrepreneur
+<h6 class="tagline">Electronics Engineer • Innovator • Entrepreneur</h6>
 
 </p>
 
@@ -168,31 +168,6 @@ Madikeri
 
 </section>
 
-<!-- SKILLS -->
-
-<section id="skills" class="content-card">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill-item">Python</div>
-
-<div class="skill-item">C Programming</div>
-
-<div class="skill-item">Internet of Things (IoT)</div>
-
-<div class="skill-item">Verilog</div>
-
-<div class="skill-item">Data Analysis Using Excel</div>
-
-<div class="skill-item">Soldering</div>
-
-<div class="skill-item">Leadership</div>
-
-</div>
-
-</section>
 
 <!-- INTERNSHIPS -->
 
@@ -203,30 +178,96 @@ Madikeri
 <button class="accordion"
 onclick="toggleSection('intern1')">
 
-Experimind Labs Pvt Ltd
+Experimind Labs Pvt. Ltd
 
 </button>
 
 <div id="intern1" class="details">
 
-Electronics Product Development Intern.
-During my internship, I contributed to product development by assisting in the design and implementation of electronic circuits. I participated in hardware assembly, integration, troubleshooting, testing, and validation to ensure reliable system performance. This experience strengthened my engineering problem-solving skills, enhanced my practical knowledge of electronics, and provided valuable exposure to real-world industry practices and development processes.
+<h4>Electronics Product Development Intern</h4>
+<p><strong>June 2025 – July 2025</strong></p>
+
+<p>
+Gained hands-on experience in electronics product development, circuit implementation,
+hardware integration, and system testing. Contributed to prototype development,
+troubleshooting, and validation of electronic systems while collaborating on innovative
+engineering projects and real-world product development processes.
+</p>
+
 </div>
 
 <button class="accordion"
 onclick="toggleSection('intern2')">
 
-JAXA Space Agency Study
+JAXA Space Mission Analysis Internship
 
 </button>
 
 <div id="intern2" class="details">
 
-During my internship, I studied the missions of the Japan Aerospace Exploration Agency (JAXA), focusing on mission success rates, failures, and technological advancements. I analyzed various space exploration projects to understand mission planning, risk management, and innovation in aerospace engineering. This experience enhanced my knowledge of satellite technology, robotics, space systems, and modern aerospace technologies.
+<h4>Research & Analysis Intern</h4>
+<p><strong>October 2023 – May 2024</strong></p>
+
+<p>
+Conducted an in-depth study of JAXA space missions, analyzing mission success rates,
+failures, technological advancements, and key factors influencing mission outcomes.
+Explored satellite technology, robotics, risk management, and modern aerospace systems
+to gain insights into space exploration and engineering innovation.
+</p>
 
 </div>
 
 </section>
+
+<!--TECHNICAL SKILLS -->
+
+<section id="skills" class="content-card">
+
+<h2>Technical Skills</h2>
+
+<button class="accordion" onclick="toggleSection('skill1')">
+    Programming
+</button>
+
+<div id="skill1" class="details">
+    <ul style="padding-left: 30px;">
+        <li>C</li>
+        <li>Python</li>
+        <li>Embedded C</li>
+    </ul>
+</div>
+
+<button class="accordion" onclick="toggleSection('skill2')">
+    Embedded & IoT
+</button>
+
+<div id="skill2" class="details">
+    <ul style="padding-left: 30px;">
+        <li>ESP32</li>
+        <li>Arduino Uno</li>
+        <li>RFID (MFRC522)</li>
+        <li>Sensor Integration</li>
+        <li>Wi-Fi Communication</li>
+        <li>IoT Systems</li>
+    </ul>
+</div>
+
+<button class="accordion" onclick="toggleSection('skill3')">
+    Hardware
+</button>
+
+<div id="skill3" class="details">
+    <ul style="padding-left: 30px;">
+        <li>Soldering</li>
+        <li>Circuit Implementation</li>
+        <li>Hardware Troubleshooting</li>
+        <li>Servo Motors</li>
+        <li>Motor Drivers</li>
+    </ul>
+</div>
+
+</section>
+
 
 <!-- PROJECTS -->
 
@@ -234,98 +275,533 @@ During my internship, I studied the missions of the Japan Aerospace Exploration 
 
 <h2>Projects</h2>
 
-<button class="accordion"
-onclick="toggleSection('project1')">
 
-Automated Baby Cradle
-
+<button class="accordion" onclick="toggleSection('project6')">
+    Smart Warehouse Management System (RFID + ESP32)
 </button>
 
-<div id="project1" class="details">
+<div id="project6" class="details">
 
-Developed an ESP32-based smart baby cradle that detects infant cries using a sound sensor and automatically rocks the cradle using a motor mechanism. The system enhances infant comfort and reduces caregiver effort by providing immediate soothing action. It integrates IoT-enabled control, real-time monitoring, and automated response for improved baby care.
+    <h4>Problem Statement</h4>
+    <p>
+        Warehouses often face challenges in manually tracking inventory and verifying products,
+        leading to errors, delays, and inefficient management.
+    </p>
 
+    <h4>Objective</h4>
+    <p>
+        To develop an automated warehouse management system using ESP32 and RFID technology
+        for product identification, verification, and inventory tracking.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>ESP32</li>
+        <li>RFID Reader (MFRC522)</li>
+        <li>RFID Tags</li>
+        <li>IR Sensors</li>
+        <li>Servo Motors</li>
+        <li>LCD Display</li>
+        <li>Wi-Fi Communication</li>
+        <li>Arduino IDE</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed an IoT-based Smart Warehouse Management System using ESP32 and RFID technology.
+        The system automatically identifies and verifies products using RFID tags, tracks inventory
+        movement through sensors, and sorts products based on validation results.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>RFID-based Product Identification</li>
+        <li>Automated Inventory Tracking</li>
+        <li>Product Verification</li>
+        <li>Real-Time Monitoring</li>
+        <li>Automated Product Sorting</li>
+        <li>Wi-Fi Connectivity</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully automated product tracking and verification, improving inventory accuracy and
+        reducing manual intervention in warehouse operations.
+    </p>
 
 </div>
 
-<button class="accordion"
-onclick="toggleSection('project2')">
-
-Driver Drowsiness Detection
-
+<button class="accordion" onclick="toggleSection('project7')">
+    Driver Drowsiness Detection System – ESP32
 </button>
 
-<div id="project2" class="details">
+<div id="project7" class="details">
 
-Developed a smart wearable system designed to detect user drowsiness and fatigue using sensors and real-time monitoring techniques. The device analyzes indicators of sleepiness and provides instant alerts through vibrations or sound notifications to improve safety and awareness. This system can help prevent accidents and enhance user well-being during daily activities.
+    <h4>Problem Statement</h4>
+    <p>
+        Driver fatigue and drowsiness are major causes of road accidents worldwide.
+        Many accidents occur because drivers fail to recognize signs of sleepiness while driving,
+        leading to delayed reactions and loss of vehicle control.
+    </p>
 
+    <h4>Objective</h4>
+    <p>
+        To develop a smart driver safety system that detects driver drowsiness in real time
+        and provides alerts to prevent accidents and improve road safety.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>ESP32</li>
+        <li>IR Sensors</li>
+        <li>Buzzer</li>
+        <li>LED Indicators</li>
+        <li>DC Motors</li>
+        <li>L298N Motor Driver</li>
+        <li>Wi-Fi Communication</li>
+        <li>Arduino IDE</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed an ESP32-based Driver Drowsiness Detection System that continuously monitors
+        the driver's eye status using IR sensors. When signs of drowsiness are detected, the
+        system activates visual and audible alerts to regain the driver's attention. If the
+        driver fails to respond, the system automatically reduces vehicle speed, activates
+        emergency indicators, and can send notifications through wireless communication to
+        enhance road safety.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>Real-Time Drowsiness Detection</li>
+        <li>Audible and Visual Alerts</li>
+        <li>Automatic Vehicle Speed Reduction</li>
+        <li>Emergency Warning System</li>
+        <li>ESP32-Based Control System</li>
+        <li>Enhanced Driver Safety</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully developed a smart safety system capable of detecting driver drowsiness
+        and initiating preventive actions, contributing to accident prevention and improved
+        road safety.
+    </p>
 
 </div>
 
-<button class="accordion"
-onclick="toggleSection('project3')">
-
-Line Follower Robot
-
+<button class="accordion" onclick="toggleSection('project8')">
+    Automated Baby Cradle Using ESP32
 </button>
 
-<div id="project3" class="details">
+<div id="project8" class="details">
 
-Developed an Arduino-based autonomous robot capable of navigating its environment using IR sensors. The robot detects obstacles and changes its direction automatically without human intervention. The project involved sensor integration, motor control, and embedded programming, demonstrating concepts of automation, robotics, and real-time decision-making in autonomous systems.
+    <h4>Problem Statement</h4>
+    <p>
+        Parents often face difficulty continuously monitoring and soothing infants,
+        especially during sleep hours. Manual rocking of the cradle can be time-consuming
+        and may not always be possible when parents are occupied.
+    </p>
 
+    <h4>Objective</h4>
+    <p>
+        To develop an IoT-based automated baby cradle that detects a baby's cry and
+        automatically rocks the cradle to provide comfort and reduce parental effort.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>ESP32</li>
+        <li>Sound Sensor / Microphone Module</li>
+        <li>Servo Motor</li>
+        <li>Wi-Fi Communication</li>
+        <li>Power Supply Module</li>
+        <li>Arduino IDE</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed an ESP32-based automated baby cradle system that continuously monitors
+        a baby's crying patterns using a sound sensor. When a cry is detected, the ESP32
+        activates a motorized rocking mechanism to gently move the cradle and soothe the
+        baby. The system automates infant care, improves comfort, and reduces the need
+        for constant manual intervention by parents.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>Automatic Cry Detection</li>
+        <li>Motorized Cradle Rocking</li>
+        <li>ESP32-Based Control System</li>
+        <li>Real-Time Response</li>
+        <li>Reduced Parental Effort</li>
+        <li>Improved Infant Comfort</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully developed an automated baby cradle capable of detecting a baby's cry
+        and initiating automatic rocking, providing a smart and efficient solution for
+        infant care and comfort.
+    </p>
 
 </div>
 
-<button class="accordion"
-onclick="toggleSection('project4')">
-
-Sudoku Solver
-
+<button class="accordion" onclick="toggleSection('project9')">
+    Sudoku Solver – Python
 </button>
 
-<div id="project4" class="details">
+<div id="project9" class="details">
 
-Developed a Python-based Sudoku solver using the backtracking algorithm to efficiently solve Sudoku puzzles. The program systematically fills empty cells, validates each move according to Sudoku rules, and backtracks when conflicts occur. This project enhanced my understanding of recursion, algorithm design, problem-solving techniques, and optimization in software development.
+    <h4>Problem Statement</h4>
+    <p>
+        Solving Sudoku puzzles manually can be time-consuming and challenging,
+        especially for complex puzzles that require extensive logical reasoning
+        and trial-and-error approaches.
+    </p>
+
+    <h4>Objective</h4>
+    <p>
+        To develop a Python-based application capable of automatically solving
+        Sudoku puzzles using efficient algorithms and logical problem-solving techniques.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>Python</li>
+        <li>Backtracking Algorithm</li>
+        <li>Data Structures</li>
+        <li>Visual Studio Code</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed a Sudoku Solver application in Python using the Backtracking
+        Algorithm. The program systematically analyzes the puzzle, identifies
+        valid number placements, and recursively solves the grid while ensuring
+        all Sudoku constraints are satisfied. The project demonstrates strong
+        problem-solving, algorithm design, and logical reasoning skills.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>Automatic Sudoku Puzzle Solving</li>
+        <li>Backtracking-Based Solution Approach</li>
+        <li>Efficient Constraint Validation</li>
+        <li>Error-Free Puzzle Completion</li>
+        <li>Logical and Recursive Problem Solving</li>
+        <li>User-Friendly Program Structure</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully developed a Python application capable of solving Sudoku
+        puzzles accurately and efficiently, demonstrating proficiency in
+        algorithms, recursion, and software development.
+    </p>
 
 </div>
 
-<button class="accordion"
-onclick="toggleSection('project5')">
-
-Password Detection System
-
+<button class="accordion" onclick="toggleSection('project10')">
+    Line Follower Robot – Arduino Uno
 </button>
 
-<div id="project5" class="details">
+<div id="project10" class="details">
 
-Developed an FSM-based password detection system using Verilog HDL to verify a predefined sequence of inputs. The design utilized Finite State Machine (FSM) concepts to transition between states based on user inputs and generate authentication outputs. This project strengthened my knowledge of digital system design, sequential logic, state machine implementation, and hardware description languages.
+    <h4>Problem Statement</h4>
+    <p>
+        Autonomous navigation is a fundamental concept in robotics. Industries and
+        automation systems require robots that can follow predefined paths accurately
+        without human intervention to improve efficiency and reduce operational costs.
+    </p>
 
+    <h4>Objective</h4>
+    <p>
+        To design and develop an autonomous line follower robot capable of detecting
+        and following a predefined path using sensors and motor control techniques.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>Arduino Uno</li>
+        <li>IR Sensors</li>
+        <li>L298N Motor Driver</li>
+        <li>DC Motors</li>
+        <li>Robot Chassis</li>
+        <li>Arduino IDE</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed an Arduino-based autonomous line follower robot that uses IR sensors
+        to detect and follow a predefined path. The sensor data is processed by the
+        Arduino Uno, which continuously adjusts motor speeds and directions through
+        the motor driver to maintain accurate path tracking. The project demonstrates
+        concepts of robotics, sensor integration, motor control, and autonomous navigation.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>Autonomous Path Following</li>
+        <li>IR Sensor-Based Line Detection</li>
+        <li>Real-Time Direction Correction</li>
+        <li>Efficient Motor Control</li>
+        <li>Arduino-Based Processing</li>
+        <li>Low-Cost Robotics Solution</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully developed an autonomous robot capable of accurately following
+        a predefined path, demonstrating practical skills in embedded systems,
+        robotics, sensor interfacing, and control systems.
+    </p>
+
+</div>
+
+<button class="accordion" onclick="toggleSection('project11')">
+    Arduino Sensor Integration Project
+</button>
+
+<div id="project11" class="details">
+
+    <h4>Problem Statement</h4>
+    <p>
+        Modern automation and monitoring systems rely on various sensors to collect
+        real-time data from their surroundings. Understanding how different sensors
+        operate and interact with microcontrollers is essential for developing smart
+        embedded and IoT solutions.
+    </p>
+
+    <h4>Objective</h4>
+    <p>
+        To study and implement the interfacing of multiple sensors with Arduino Uno
+        for real-time data acquisition, monitoring, and automation applications.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>Arduino Uno</li>
+        <li>Ultrasonic Sensor</li>
+        <li>IR Sensor</li>
+        <li>Soil Moisture Sensor</li>
+        <li>PIR Motion Sensor</li>
+        <li>Arduino IDE</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed multiple Arduino-based applications by interfacing various sensors,
+        including ultrasonic, IR, soil moisture, and motion sensors. The project
+        involved acquiring sensor data, processing inputs through Arduino Uno, and
+        implementing basic automation and monitoring functionalities. This project
+        provided hands-on experience in sensor interfacing, embedded programming,
+        circuit development, and real-time data processing.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>Multi-Sensor Integration</li>
+        <li>Real-Time Data Acquisition</li>
+        <li>Distance Measurement</li>
+        <li>Motion Detection</li>
+        <li>Soil Moisture Monitoring</li>
+        <li>Embedded System Development</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully implemented and tested multiple sensor-based applications,
+        gaining practical knowledge in sensor interfacing, embedded systems,
+        automation, and Arduino programming.
+    </p>
+
+</div>
+
+<button class="accordion" onclick="toggleSection('project12')">
+    Password Detection System – Verilog
+</button>
+
+<div id="project12" class="details">
+
+    <h4>Problem Statement</h4>
+    <p>
+        Secure access control systems require reliable methods to verify user credentials
+        before granting access. Traditional systems must accurately detect predefined
+        password sequences while preventing unauthorized access.
+    </p>
+
+    <h4>Objective</h4>
+    <p>
+        To design and implement a digital password detection system using Verilog and
+        Finite State Machine (FSM) concepts for sequence recognition and access control.
+    </p>
+
+    <h4>Technologies Used</h4>
+    <ul style="padding-left: 30px;">
+        <li>Verilog HDL</li>
+        <li>Finite State Machine (FSM)</li>
+        <li>Digital Logic Design</li>
+        <li>ModelSim / Simulation Tools</li>
+        <li>Xilinx Vivado</li>
+    </ul>
+
+    <h4>Description</h4>
+    <p>
+        Developed a password detection system using Verilog HDL based on Finite State
+        Machine (FSM) architecture. The system continuously monitors input sequences and
+        transitions between states to detect a predefined password pattern. Upon successful
+        detection, the system generates an output signal indicating authorized access.
+        The project demonstrates digital system design, state machine implementation,
+        hardware description language programming, and simulation-based verification.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul style="padding-left: 30px;">
+        <li>FSM-Based Password Detection</li>
+        <li>Sequence Recognition Logic</li>
+        <li>Real-Time Input Monitoring</li>
+        <li>Authorized Access Indication</li>
+        <li>Verilog HDL Implementation</li>
+        <li>Simulation and Verification</li>
+    </ul>
+
+    <h4>Outcome</h4>
+    <p>
+        Successfully designed and simulated a digital password detection system capable
+        of recognizing predefined input sequences, demonstrating proficiency in Verilog,
+        FSM design, digital electronics, and hardware system development.
+    </p>
 
 </div>
 
 </section>
 
-<!-- HOBBIES -->
+<!-- ACTIVITIES -->
+
+<section id="activities" class="content-card">
+    <h2>Activities & Volunteer Work</h2>
+
+
+<button class="accordion" onclick="toggleSection('activity1')">
+    Core Member (Inventory) – Electronics Project Club (EPC)
+</button>
+
+<div id="activity1" class="details">
+
+    <h4>Role & Responsibilities</h4>
+
+    <p>
+        Served as a Core Member of the Electronics Project Club (EPC), responsible for
+        managing the inventory of electronic components, tools, and project resources.
+        Ensured the availability and proper organization of equipment required for
+        technical projects, workshops, and club activities. Collaborated with team
+        members to support project development and promote a productive learning
+        environment.
+    </p>
+
+</div>
+
+<button class="accordion" onclick="toggleSection('activity2')">
+    Thorana 2025 – Volunteer
+</button>
+
+<div id="activity2" class="details">
+
+    <h4>Event Management & Coordination</h4>
+
+    <p>
+        Actively contributed to the successful organization and execution of Thorana 2025,
+        a major cultural and technical event at NMAM Institute of Technology. Assisted in
+        event coordination, participant management, logistics, and on-site operations,
+        ensuring smooth conduct of various activities and programs throughout the festival.
+    </p>
+
+</div>
+
+<button class="accordion" onclick="toggleSection('activity3')">
+    Lazzerena – Technical Event, Incridea 2025
+</button>
+
+<div id="activity3" class="details">
+
+    <h4>Technical Event Volunteer</h4>
+
+    <p>
+        Participated in Lazzerena, a technical event conducted during Incridea 2025.
+        Assisted in event setup, participant coordination, technical support, and overall
+        event management. Developed teamwork, communication, and organizational skills
+        while contributing to the successful execution of the competition.
+    </p>
+
+</div>
+
+</section>
+
+<!-- Hobbies & Interests -->
 
 <section id="hobbies" class="content-card">
 
 <h2>Hobbies & Interests</h2>
 
-<div class="skills">
+<button class="accordion" onclick="toggleSection('hobby1')">
+    Technology Exploration
+</button>
 
-<div class="skill-item">Technology Exploration</div>
+<div id="hobby1" class="details">
+    <p>
+        Passionate about exploring emerging technologies, electronics, IoT, embedded systems,
+        artificial intelligence, and innovative engineering solutions.
+    </p>
+</div>
 
-<div class="skill-item">Hobby Projects</div>
+<button class="accordion" onclick="toggleSection('hobby2')">
+    Hobby Projects
+</button>
 
-<div class="skill-item">Innovation & Product Design</div>
+<div id="hobby2" class="details">
+    <p>
+        Enjoy building practical electronics and software projects to experiment with new
+        ideas, enhance technical skills, and solve real-world problems.
+    </p>
+</div>
 
-<div class="skill-item">Craft Work</div>
+<button class="accordion" onclick="toggleSection('hobby3')">
+    Innovation & Product Design
+</button>
 
-<div class="skill-item">Leadership Activities</div>
+<div id="hobby3" class="details">
+    <p>
+        Interested in transforming ideas into impactful products through creative thinking,
+        prototyping, and engineering design methodologies.
+    </p>
+</div>
 
+<button class="accordion" onclick="toggleSection('hobby4')">
+    Craft Work
+</button>
+
+<div id="hobby4" class="details">
+    <p>
+        Enjoy creative craft activities that improve attention to detail, patience,
+        problem-solving, and design skills.
+    </p>
+</div>
+
+<button class="accordion" onclick="toggleSection('hobby5')">
+    Leadership Activities
+</button>
+
+<div id="hobby5" class="details">
+    <p>
+        Actively participate in leadership roles, team coordination, event management,
+        and collaborative activities that strengthen communication and organizational skills.
+    </p>
 </div>
 
 </section>
+
 
 <!-- RESUME -->
 
@@ -333,7 +809,7 @@ Developed an FSM-based password detection system using Verilog HDL to verify a p
 
 <h2>Resume</h2>
 
-<a href="assets/resume.pdf"
+<a href="assets/c_t_suhas_resume.pdf"
 download
 class="resume-btn">
 
