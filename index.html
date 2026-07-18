@@ -1,839 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="C T Suhas — Electronics &amp; Communication Engineering student, embedded systems and IoT builder, product-minded engineer.">
+<title>C T Suhas — Portfolio</title>
 
-<title>CT Suhas Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-<script>
-
-function toggleSection(id){
-
-const section = document.getElementById(id);
-
-if(section.style.display === "block"){
-
-section.style.display = "none";
-
-}else{
-
-section.style.display = "block";
-
-}
-
-}
-
-</script>
-
+<link rel="preload" as="image" href="assets/hero.png">
 </head>
-
 <body>
 
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- FIXED NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#top" class="logo">C·T·S</a>
 
-<nav class="navbar">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 
-<div class="logo">
-C T SUHAS
-</div>
-
-<ul>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#education">Education</a></li>
-
-<li><a href="#internships">Internships</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-</ul>
-
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" data-nav>About</a></li>
+    <li><a href="#education" data-nav>Education</a></li>
+    <li><a href="#skills" data-nav>Skills</a></li>
+    <li><a href="#internships" data-nav>Internships</a></li>
+    <li><a href="#projects" data-nav>Projects</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
 </nav>
 
-<!-- CONTACT BUTTON -->
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
 
-<a href="contact.html" class="contact-btn">
-Contact Me
-</a>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Welcome to C T Suhas Portfolio</p>
+      <h1 class="hero-name">C&nbsp;T&nbsp;Suhas</h1>
+      <p class="hero-role">
+        <span class="typing" id="typingText"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-intro">
+        Electronics &amp; Communication Engineering student who designs embedded systems,
+        IoT products and clean software — turning early ideas into working hardware,
+        one prototype at a time.
+      </p>
 
-<!-- HEADER -->
+      <div class="hero-actions">
+        <a href="assets/C T_Suhas_Infosys_Resume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+        <a href="assets/C T_Suhas_Infosys_Resume.pdf" download class="btn btn-ghost">Download Resume</a>
+        <a href="contact.html" class="btn btn-outline">Contact Me</a>
+      </div>
 
-<header>
+      <div class="hero-stats" id="counters">
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">💻</span>
+          <span class="stat-num" data-count="12">0</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">🎓</span>
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Internships</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">📚</span>
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Years Learning</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">🏆</span>
+          <span class="stat-num" data-count="5">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
 
-<h1>
-WELCOME TO C T SUHAS's PORTFOLIO
-</h1>
+    <div class="hero-visual">
+      <div class="hero-visual-deco" aria-hidden="true">
+        <span class="deco-dots"></span>
+        <svg class="deco-icon deco-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3"/></svg>
+        <svg class="deco-icon deco-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg>
+        <svg class="deco-icon deco-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6 5.9 5.9"/></svg>
+        <span class="deco-curve"></span>
+      </div>
 
-<p class="subtitle">
+      <div class="hero-avatar" id="heroAvatar">
+        <div class="hero-avatar-glow" aria-hidden="true"></div>
+        <div class="hero-avatar-frame">
+          <img src="assets/hero.png" class="hero-avatar-img" alt="C T Suhas illustrated avatar, arms crossed">
+        </div>
 
-<h6 class="tagline">Electronics Engineer • Innovator • Entrepreneur</h6>
+        <div class="hero-avatar-bubble" id="heroAvatarBubble" role="status" aria-live="polite">
+          <div class="hero-avatar-bubble-float">
+            <button class="hero-avatar-bubble-close" id="heroAvatarBubbleClose" aria-label="Close message">&times;</button>
+            <p>👋 Hi, I'm Suhas —<br>Let me walk you through what I build.</p>
+          </div>
+        </div>
+      </div>
 
-</p>
+      <button class="hero-avatar-mobile-toggle" id="heroAvatarMobileToggle" aria-label="Show guide message">
+        <img src="assets/hero.png" alt="C T Suhas avatar" class="hero-avatar-mobile-img">
+      </button>
 
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+    <span></span>
+  </a>
 </header>
 
-<div class="container">
-
-<!-- ABOUT -->
-
-<section id="about" class="content-card">
-
-<h2>About Me</h2>
-
-<p>
-
-I am C T Suhas, an Electronics and Communication Engineering student passionate about innovation, embedded systems, IoT technologies, entrepreneurship, and product development. I enjoy turning ideas into practical solutions through technology and continuously improving my skills through projects, internships, and hands-on learning.
-
-My goal is to develop impactful technologies that solve real-world problems, improve lives, and contribute to society through creativity, engineering excellence, and continuous innovation.
-
-</p>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education" class="content-card">
-
-<h2>Education Journey</h2>
-
-<button class="accordion"
-onclick="toggleSection('edu1')">
-
-NMAM Institute of Technology
-
-</button>
-
-<div id="edu1" class="details">
-
-Bachelor of Technology in Electronics and Communication Engineering
-
-<br>
-
-2023 - 2027
-
-<br>
-
-Nitte, Karkala
-
-</div>
-
-<button class="accordion"
-onclick="toggleSection('edu2')">
-
-Sharada PU College
-
-</button>
-
-<div id="edu2" class="details">
-
-PUC
-
-<br>
-
-2021 - 2023
-
-<br>
-
-Kodial Bail, Mangalore
-
-</div>
-
-<button class="accordion"
-onclick="toggleSection('edu3')">
-
-St Michael's School
-
-</button>
-
-<div id="edu3" class="details">
-
-SSLC
-
-<br>
-
-2021
-
-<br>
-
-Madikeri
-
-</div>
-
-</section>
-
-
-<!-- INTERNSHIPS -->
-
-<section id="internships" class="content-card">
-
-<h2>Internships</h2>
-
-<button class="accordion"
-onclick="toggleSection('intern1')">
-
-Experimind Labs Pvt. Ltd
-
-</button>
-
-<div id="intern1" class="details">
-
-<h4>Electronics Product Development Intern</h4>
-<p><strong>June 2025 – July 2025</strong></p>
-
-<p>
-Gained hands-on experience in electronics product development, circuit implementation,
-hardware integration, and system testing. Contributed to prototype development,
-troubleshooting, and validation of electronic systems while collaborating on innovative
-engineering projects and real-world product development processes.
-</p>
-
-</div>
-
-<button class="accordion"
-onclick="toggleSection('intern2')">
-
-JAXA Space Mission Analysis Internship
-
-</button>
-
-<div id="intern2" class="details">
-
-<h4>Research & Analysis Intern</h4>
-<p><strong>October 2023 – May 2024</strong></p>
-
-<p>
-Conducted an in-depth study of JAXA space missions, analyzing mission success rates,
-failures, technological advancements, and key factors influencing mission outcomes.
-Explored satellite technology, robotics, risk management, and modern aerospace systems
-to gain insights into space exploration and engineering innovation.
-</p>
-
-</div>
-
-</section>
-
-<!--TECHNICAL SKILLS -->
-
-<section id="skills" class="content-card">
-
-<h2>Technical Skills</h2>
-
-<button class="accordion" onclick="toggleSection('skill1')">
-    Programming
-</button>
-
-<div id="skill1" class="details">
-    <ul style="padding-left: 30px;">
-        <li>C</li>
-        <li>Python</li>
-        <li>Embedded C</li>
-    </ul>
-</div>
-
-<button class="accordion" onclick="toggleSection('skill2')">
-    Embedded & IoT
-</button>
-
-<div id="skill2" class="details">
-    <ul style="padding-left: 30px;">
-        <li>ESP32</li>
-        <li>Arduino Uno</li>
-        <li>RFID (MFRC522)</li>
-        <li>Sensor Integration</li>
-        <li>Wi-Fi Communication</li>
-        <li>IoT Systems</li>
-    </ul>
-</div>
-
-<button class="accordion" onclick="toggleSection('skill3')">
-    Hardware
-</button>
-
-<div id="skill3" class="details">
-    <ul style="padding-left: 30px;">
-        <li>Soldering</li>
-        <li>Circuit Implementation</li>
-        <li>Hardware Troubleshooting</li>
-        <li>Servo Motors</li>
-        <li>Motor Drivers</li>
-    </ul>
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects" class="content-card">
-
-<h2>Projects</h2>
-
-
-<button class="accordion" onclick="toggleSection('project6')">
-    Smart Warehouse Management System (RFID + ESP32)
-</button>
-
-<div id="project6" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Warehouses often face challenges in manually tracking inventory and verifying products,
-        leading to errors, delays, and inefficient management.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To develop an automated warehouse management system using ESP32 and RFID technology
-        for product identification, verification, and inventory tracking.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>ESP32</li>
-        <li>RFID Reader (MFRC522)</li>
-        <li>RFID Tags</li>
-        <li>IR Sensors</li>
-        <li>Servo Motors</li>
-        <li>LCD Display</li>
-        <li>Wi-Fi Communication</li>
-        <li>Arduino IDE</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed an IoT-based Smart Warehouse Management System using ESP32 and RFID technology.
-        The system automatically identifies and verifies products using RFID tags, tracks inventory
-        movement through sensors, and sorts products based on validation results.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>RFID-based Product Identification</li>
-        <li>Automated Inventory Tracking</li>
-        <li>Product Verification</li>
-        <li>Real-Time Monitoring</li>
-        <li>Automated Product Sorting</li>
-        <li>Wi-Fi Connectivity</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully automated product tracking and verification, improving inventory accuracy and
-        reducing manual intervention in warehouse operations.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project7')">
-    Driver Drowsiness Detection System – ESP32
-</button>
-
-<div id="project7" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Driver fatigue and drowsiness are major causes of road accidents worldwide.
-        Many accidents occur because drivers fail to recognize signs of sleepiness while driving,
-        leading to delayed reactions and loss of vehicle control.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To develop a smart driver safety system that detects driver drowsiness in real time
-        and provides alerts to prevent accidents and improve road safety.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>ESP32</li>
-        <li>IR Sensors</li>
-        <li>Buzzer</li>
-        <li>LED Indicators</li>
-        <li>DC Motors</li>
-        <li>L298N Motor Driver</li>
-        <li>Wi-Fi Communication</li>
-        <li>Arduino IDE</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed an ESP32-based Driver Drowsiness Detection System that continuously monitors
-        the driver's eye status using IR sensors. When signs of drowsiness are detected, the
-        system activates visual and audible alerts to regain the driver's attention. If the
-        driver fails to respond, the system automatically reduces vehicle speed, activates
-        emergency indicators, and can send notifications through wireless communication to
-        enhance road safety.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>Real-Time Drowsiness Detection</li>
-        <li>Audible and Visual Alerts</li>
-        <li>Automatic Vehicle Speed Reduction</li>
-        <li>Emergency Warning System</li>
-        <li>ESP32-Based Control System</li>
-        <li>Enhanced Driver Safety</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully developed a smart safety system capable of detecting driver drowsiness
-        and initiating preventive actions, contributing to accident prevention and improved
-        road safety.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project8')">
-    Automated Baby Cradle Using ESP32
-</button>
-
-<div id="project8" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Parents often face difficulty continuously monitoring and soothing infants,
-        especially during sleep hours. Manual rocking of the cradle can be time-consuming
-        and may not always be possible when parents are occupied.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To develop an IoT-based automated baby cradle that detects a baby's cry and
-        automatically rocks the cradle to provide comfort and reduce parental effort.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>ESP32</li>
-        <li>Sound Sensor / Microphone Module</li>
-        <li>Servo Motor</li>
-        <li>Wi-Fi Communication</li>
-        <li>Power Supply Module</li>
-        <li>Arduino IDE</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed an ESP32-based automated baby cradle system that continuously monitors
-        a baby's crying patterns using a sound sensor. When a cry is detected, the ESP32
-        activates a motorized rocking mechanism to gently move the cradle and soothe the
-        baby. The system automates infant care, improves comfort, and reduces the need
-        for constant manual intervention by parents.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>Automatic Cry Detection</li>
-        <li>Motorized Cradle Rocking</li>
-        <li>ESP32-Based Control System</li>
-        <li>Real-Time Response</li>
-        <li>Reduced Parental Effort</li>
-        <li>Improved Infant Comfort</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully developed an automated baby cradle capable of detecting a baby's cry
-        and initiating automatic rocking, providing a smart and efficient solution for
-        infant care and comfort.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project9')">
-    Sudoku Solver – Python
-</button>
-
-<div id="project9" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Solving Sudoku puzzles manually can be time-consuming and challenging,
-        especially for complex puzzles that require extensive logical reasoning
-        and trial-and-error approaches.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To develop a Python-based application capable of automatically solving
-        Sudoku puzzles using efficient algorithms and logical problem-solving techniques.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>Python</li>
-        <li>Backtracking Algorithm</li>
-        <li>Data Structures</li>
-        <li>Visual Studio Code</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed a Sudoku Solver application in Python using the Backtracking
-        Algorithm. The program systematically analyzes the puzzle, identifies
-        valid number placements, and recursively solves the grid while ensuring
-        all Sudoku constraints are satisfied. The project demonstrates strong
-        problem-solving, algorithm design, and logical reasoning skills.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>Automatic Sudoku Puzzle Solving</li>
-        <li>Backtracking-Based Solution Approach</li>
-        <li>Efficient Constraint Validation</li>
-        <li>Error-Free Puzzle Completion</li>
-        <li>Logical and Recursive Problem Solving</li>
-        <li>User-Friendly Program Structure</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully developed a Python application capable of solving Sudoku
-        puzzles accurately and efficiently, demonstrating proficiency in
-        algorithms, recursion, and software development.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project10')">
-    Line Follower Robot – Arduino Uno
-</button>
-
-<div id="project10" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Autonomous navigation is a fundamental concept in robotics. Industries and
-        automation systems require robots that can follow predefined paths accurately
-        without human intervention to improve efficiency and reduce operational costs.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To design and develop an autonomous line follower robot capable of detecting
-        and following a predefined path using sensors and motor control techniques.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>Arduino Uno</li>
-        <li>IR Sensors</li>
-        <li>L298N Motor Driver</li>
-        <li>DC Motors</li>
-        <li>Robot Chassis</li>
-        <li>Arduino IDE</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed an Arduino-based autonomous line follower robot that uses IR sensors
-        to detect and follow a predefined path. The sensor data is processed by the
-        Arduino Uno, which continuously adjusts motor speeds and directions through
-        the motor driver to maintain accurate path tracking. The project demonstrates
-        concepts of robotics, sensor integration, motor control, and autonomous navigation.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>Autonomous Path Following</li>
-        <li>IR Sensor-Based Line Detection</li>
-        <li>Real-Time Direction Correction</li>
-        <li>Efficient Motor Control</li>
-        <li>Arduino-Based Processing</li>
-        <li>Low-Cost Robotics Solution</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully developed an autonomous robot capable of accurately following
-        a predefined path, demonstrating practical skills in embedded systems,
-        robotics, sensor interfacing, and control systems.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project11')">
-    Arduino Sensor Integration Project
-</button>
-
-<div id="project11" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Modern automation and monitoring systems rely on various sensors to collect
-        real-time data from their surroundings. Understanding how different sensors
-        operate and interact with microcontrollers is essential for developing smart
-        embedded and IoT solutions.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To study and implement the interfacing of multiple sensors with Arduino Uno
-        for real-time data acquisition, monitoring, and automation applications.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>Arduino Uno</li>
-        <li>Ultrasonic Sensor</li>
-        <li>IR Sensor</li>
-        <li>Soil Moisture Sensor</li>
-        <li>PIR Motion Sensor</li>
-        <li>Arduino IDE</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed multiple Arduino-based applications by interfacing various sensors,
-        including ultrasonic, IR, soil moisture, and motion sensors. The project
-        involved acquiring sensor data, processing inputs through Arduino Uno, and
-        implementing basic automation and monitoring functionalities. This project
-        provided hands-on experience in sensor interfacing, embedded programming,
-        circuit development, and real-time data processing.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>Multi-Sensor Integration</li>
-        <li>Real-Time Data Acquisition</li>
-        <li>Distance Measurement</li>
-        <li>Motion Detection</li>
-        <li>Soil Moisture Monitoring</li>
-        <li>Embedded System Development</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully implemented and tested multiple sensor-based applications,
-        gaining practical knowledge in sensor interfacing, embedded systems,
-        automation, and Arduino programming.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('project12')">
-    Password Detection System – Verilog
-</button>
-
-<div id="project12" class="details">
-
-    <h4>Problem Statement</h4>
-    <p>
-        Secure access control systems require reliable methods to verify user credentials
-        before granting access. Traditional systems must accurately detect predefined
-        password sequences while preventing unauthorized access.
-    </p>
-
-    <h4>Objective</h4>
-    <p>
-        To design and implement a digital password detection system using Verilog and
-        Finite State Machine (FSM) concepts for sequence recognition and access control.
-    </p>
-
-    <h4>Technologies Used</h4>
-    <ul style="padding-left: 30px;">
-        <li>Verilog HDL</li>
-        <li>Finite State Machine (FSM)</li>
-        <li>Digital Logic Design</li>
-        <li>ModelSim / Simulation Tools</li>
-        <li>Xilinx Vivado</li>
-    </ul>
-
-    <h4>Description</h4>
-    <p>
-        Developed a password detection system using Verilog HDL based on Finite State
-        Machine (FSM) architecture. The system continuously monitors input sequences and
-        transitions between states to detect a predefined password pattern. Upon successful
-        detection, the system generates an output signal indicating authorized access.
-        The project demonstrates digital system design, state machine implementation,
-        hardware description language programming, and simulation-based verification.
-    </p>
-
-    <h4>Key Features</h4>
-    <ul style="padding-left: 30px;">
-        <li>FSM-Based Password Detection</li>
-        <li>Sequence Recognition Logic</li>
-        <li>Real-Time Input Monitoring</li>
-        <li>Authorized Access Indication</li>
-        <li>Verilog HDL Implementation</li>
-        <li>Simulation and Verification</li>
-    </ul>
-
-    <h4>Outcome</h4>
-    <p>
-        Successfully designed and simulated a digital password detection system capable
-        of recognizing predefined input sequences, demonstrating proficiency in Verilog,
-        FSM design, digital electronics, and hardware system development.
-    </p>
-
-</div>
-
-</section>
-
-<!-- ACTIVITIES -->
-
-<section id="activities" class="content-card">
-    <h2>Activities & Volunteer Work</h2>
-
-
-<button class="accordion" onclick="toggleSection('activity1')">
-    Core Member (Inventory) – Electronics Project Club (EPC)
-</button>
-
-<div id="activity1" class="details">
-
-    <h4>Role & Responsibilities</h4>
-
-    <p>
-        Served as a Core Member of the Electronics Project Club (EPC), responsible for
-        managing the inventory of electronic components, tools, and project resources.
-        Ensured the availability and proper organization of equipment required for
-        technical projects, workshops, and club activities. Collaborated with team
-        members to support project development and promote a productive learning
-        environment.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('activity2')">
-    Thorana 2025 – Volunteer
-</button>
-
-<div id="activity2" class="details">
-
-    <h4>Event Management & Coordination</h4>
-
-    <p>
-        Actively contributed to the successful organization and execution of Thorana 2025,
-        a major cultural and technical event at NMAM Institute of Technology. Assisted in
-        event coordination, participant management, logistics, and on-site operations,
-        ensuring smooth conduct of various activities and programs throughout the festival.
-    </p>
-
-</div>
-
-<button class="accordion" onclick="toggleSection('activity3')">
-    Lazzerena – Technical Event, Incridea 2025
-</button>
-
-<div id="activity3" class="details">
-
-    <h4>Technical Event Volunteer</h4>
-
-    <p>
-        Participated in Lazzerena, a technical event conducted during Incridea 2025.
-        Assisted in event setup, participant coordination, technical support, and overall
-        event management. Developed teamwork, communication, and organizational skills
-        while contributing to the successful execution of the competition.
-    </p>
-
-</div>
-
-</section>
-
-<!-- Hobbies & Interests -->
-
-<section id="hobbies" class="content-card">
-
-<h2>Hobbies & Interests</h2>
-
-<button class="accordion" onclick="toggleSection('hobby1')">
-    Technology Exploration
-</button>
-
-<div id="hobby1" class="details">
-    <p>
-        Passionate about exploring emerging technologies, electronics, IoT, embedded systems,
-        artificial intelligence, and innovative engineering solutions.
-    </p>
-</div>
-
-<button class="accordion" onclick="toggleSection('hobby2')">
-    Hobby Projects
-</button>
-
-<div id="hobby2" class="details">
-    <p>
-        Enjoy building practical electronics and software projects to experiment with new
-        ideas, enhance technical skills, and solve real-world problems.
-    </p>
-</div>
-
-<button class="accordion" onclick="toggleSection('hobby3')">
-    Innovation & Product Design
-</button>
-
-<div id="hobby3" class="details">
-    <p>
-        Interested in transforming ideas into impactful products through creative thinking,
-        prototyping, and engineering design methodologies.
-    </p>
-</div>
-
-<button class="accordion" onclick="toggleSection('hobby4')">
-    Craft Work
-</button>
-
-<div id="hobby4" class="details">
-    <p>
-        Enjoy creative craft activities that improve attention to detail, patience,
-        problem-solving, and design skills.
-    </p>
-</div>
-
-<button class="accordion" onclick="toggleSection('hobby5')">
-    Leadership Activities
-</button>
-
-<div id="hobby5" class="details">
-    <p>
-        Actively participate in leadership roles, team coordination, event management,
-        and collaborative activities that strengthen communication and organizational skills.
-    </p>
-</div>
-
-</section>
-
-
-<!-- RESUME -->
-
-<section class="content-card">
-
-<h2>Resume</h2>
-
-<div class="resume-buttons">
-
-    <a href="assets/c_t_suhas_resume.pdf"
-       target="_blank"
-       class="resume-btn">
-
-       View Resume
-
-    </a>
-
-    <a href="assets/c_t_suhas_resume.pdf"
-       download
-       class="resume-btn">
-
-       Download Resume
-
-    </a>
-
-</div>
-
-</section>
-
-</div>
+<main class="container">
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <p class="section-eyebrow">01 — Get to know me</p>
+    <h2 class="section-title">About</h2>
+
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="about-icon">🌱</div>
+        <h3>Who I Am</h3>
+        <p>
+          I'm C T Suhas, an Electronics and Communication Engineering student passionate about
+          innovation, embedded systems, IoT technologies, entrepreneurship, and product development.
+          I enjoy turning ideas into practical solutions through technology.
+        </p>
+      </div>
+
+      <div class="about-card reveal">
+        <div class="about-icon">🎯</div>
+        <h3>Career Objective</h3>
+        <p>
+          To grow as an engineer who builds reliable, real-world hardware and software systems —
+          continuously sharpening my skills through hands-on projects, internships, and collaborative
+          learning.
+        </p>
+      </div>
+
+      <div class="about-card reveal">
+        <div class="about-icon">🔭</div>
+        <h3>Vision</h3>
+        <p>
+          To develop impactful technologies that solve genuine problems, improve everyday lives,
+          and contribute meaningfully to society through creativity and engineering excellence.
+        </p>
+      </div>
+
+      <div class="about-card reveal">
+        <div class="about-icon">🚀</div>
+        <h3>Mission</h3>
+        <p>
+          To keep learning relentlessly, prototype fearlessly, and ship products that are simple,
+          dependable, and genuinely useful — while building the foundation for an entrepreneurial career.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <p class="section-eyebrow">02 — Academic path</p>
+    <h2 class="section-title">Education</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <button class="timeline-header" data-accordion="edu1" aria-expanded="false">
+          <div>
+            <h3>NMAM Institute of Technology</h3>
+            <p class="timeline-sub">B.Tech, Electronics &amp; Communication Engineering</p>
+          </div>
+          <span class="timeline-meta">2023 — 2027</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="timeline-body" id="edu1">
+          <div class="timeline-body-inner">
+            <p><strong>Location:</strong> Nitte, Karkala</p>
+            <p><strong>Degree:</strong> Bachelor of Technology in Electronics and Communication Engineering</p>
+            <p><strong>Highlights:</strong> Core member of the Electronics Project Club, active in hands-on embedded systems and IoT project work alongside coursework.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <button class="timeline-header" data-accordion="edu2" aria-expanded="false">
+          <div>
+            <h3>Sharada PU College</h3>
+            <p class="timeline-sub">Pre-University Course (PUC) — Science</p>
+          </div>
+          <span class="timeline-meta">2021 — 2023</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="timeline-body" id="edu2">
+          <div class="timeline-body-inner">
+            <p><strong>Location:</strong> Kodial Bail, Mangalore</p>
+            <p><strong>Focus:</strong> Physics, Chemistry, Mathematics — building the foundation for engineering studies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <button class="timeline-header" data-accordion="edu3" aria-expanded="false">
+          <div>
+            <h3>St Michael's School</h3>
+            <p class="timeline-sub">SSLC</p>
+          </div>
+          <span class="timeline-meta">2020 - 2021</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="timeline-body" id="edu3">
+          <div class="timeline-body-inner">
+            <p><strong>Location:</strong> Madikeri</p>
+            <p><strong>Achievements:</strong> Completed secondary schooling with a strong foundation in mathematics and science.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <p class="section-eyebrow">03 — Toolkit</p>
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">💻</span>
+          <h3>Programming</h3>
+        </div>
+        <div class="skill-tags">
+          <span>C</span><span>Python</span><span>Embedded C</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">🔌</span>
+          <h3>Embedded Systems</h3>
+        </div>
+        <div class="skill-tags">
+          <span>ESP32</span><span>Arduino Uno</span><span>FSM Design</span><span>Verilog HDL</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">📡</span>
+          <h3>IoT</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Wi-Fi Communication</span><span>Sensor Integration</span><span>RFID (MFRC522)</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">🔧</span>
+          <h3>Electronics</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Soldering</span><span>Circuit Implementation</span><span>Motor Drivers</span><span>Servo Motors</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">🛠️</span>
+          <h3>Software</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Arduino IDE</span><span>Xilinx Vivado</span><span>ModelSim</span><span>VS Code</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">🤝</span>
+          <h3>Leadership</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Team Coordination</span><span>Event Management</span><span>Inventory Management</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-head">
+          <span class="skill-icon">🧰</span>
+          <h3>Tools</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Hardware Troubleshooting</span><span>Prototyping</span><span>Testing &amp; Validation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS -->
+  <section id="internships" class="section">
+    <p class="section-eyebrow">04 — Real-world experience</p>
+    <h2 class="section-title">Internships</h2>
+
+    <div class="cards-stack">
+
+      <article class="expand-card reveal">
+        <button class="expand-header" data-accordion="intern1" aria-expanded="false">
+          <div>
+            <h3>Experimind Labs Pvt. Ltd</h3>
+            <p class="expand-sub">Electronics Product Development Intern</p>
+          </div>
+          <span class="expand-meta">June 2025 – July 2025</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="expand-body" id="intern1">
+          <div class="expand-body-inner">
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Circuit implementation and hardware integration for electronic products</li>
+              <li>Prototype development, troubleshooting, and system testing</li>
+              <li>Validation of electronic systems in collaboration with the engineering team</li>
+            </ul>
+            <h4>Technologies Used</h4>
+            <div class="skill-tags"><span>Circuit Design</span><span>Hardware Integration</span><span>Testing &amp; Validation</span></div>
+            <h4>Key Achievements</h4>
+            <p>Contributed directly to real product development processes, gaining practical exposure to end-to-end hardware engineering workflows.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="expand-card reveal">
+        <button class="expand-header" data-accordion="intern2" aria-expanded="false">
+          <div>
+            <h3>JAXA Space Mission Analysis Internship</h3>
+            <p class="expand-sub">Research &amp; Analysis Intern</p>
+          </div>
+          <span class="expand-meta">October 2023 – May 2024</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="expand-body" id="intern2">
+          <div class="expand-body-inner">
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>In-depth study of JAXA space missions and their outcomes</li>
+              <li>Analysis of mission success rates, failures, and technological advancements</li>
+              <li>Research into satellite technology, robotics, and risk management</li>
+            </ul>
+            <h4>Technologies Used</h4>
+            <div class="skill-tags"><span>Satellite Systems</span><span>Robotics</span><span>Risk Analysis</span></div>
+            <h4>Key Achievements</h4>
+            <p>Built a deeper understanding of modern aerospace systems and the engineering discipline behind space exploration.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <p class="section-eyebrow">05 — Selected work</p>
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-list">
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Smart Warehouse Management System</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 3 weeks</span>
+        <p class="project-desc">An RFID + ESP32 based system that automates product identification, verification, and inventory tracking across a warehouse floor.</p>
+        <div class="project-tags skill-tags">
+          <span>ESP32</span><span>RFID (MFRC522)</span><span>IR Sensors</span><span>Wi-Fi</span>
+        </div>
+        <ul class="project-features">
+          <li>Automated RFID product identification</li>
+          <li>Real-time inventory tracking</li>
+          <li>Automated sorting on verification</li>
+        </ul>
+        <a href="Inventory management.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Driver Drowsiness Detection System</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 2 weeks</span>
+        <p class="project-desc">An ESP32-based safety system that monitors driver alertness in real time and intervenes automatically if drowsiness is detected.</p>
+        <div class="project-tags skill-tags">
+          <span>ESP32</span><span>IR Sensors</span><span>L298N Motor Driver</span><span>Wi-Fi</span>
+        </div>
+        <ul class="project-features">
+          <li>Real-time eye-status monitoring</li>
+          <li>Audible &amp; visual alert system</li>
+          <li>Automatic speed reduction on no response</li>
+        </ul>
+        <a href="Driver drowsiness.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Automated Baby Cradle</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 2 weeks</span>
+        <p class="project-desc">An ESP32-powered cradle that listens for a baby's cry and rocks automatically, reducing the need for constant manual attention.</p>
+        <div class="project-tags skill-tags">
+          <span>ESP32</span><span>Sound Sensor</span><span>Servo Motor</span><span>Wi-Fi</span>
+        </div>
+        <ul class="project-features">
+          <li>Automatic cry detection</li>
+          <li>Motorized rocking mechanism</li>
+          <li>Real-time response with no manual input</li>
+        </ul>
+        <a href="Baby cradle.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Sudoku Solver</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 1 week</span>
+        <p class="project-desc">A Python application that solves any valid Sudoku grid using a systematic backtracking algorithm.</p>
+        <div class="project-tags skill-tags">
+          <span>Python</span><span>Backtracking</span><span>Data Structures</span>
+        </div>
+        <ul class="project-features">
+          <li>Automatic puzzle solving</li>
+          <li>Constraint-based validation</li>
+          <li>Recursive backtracking engine</li>
+        </ul>
+        <a href="Sudoku solver.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Line Follower Robot</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 2 weeks</span>
+        <p class="project-desc">An Arduino Uno robot that autonomously follows a predefined path using IR sensors and closed-loop motor control.</p>
+        <div class="project-tags skill-tags">
+          <span>Arduino Uno</span><span>IR Sensors</span><span>L298N</span><span>DC Motors</span>
+        </div>
+        <ul class="project-features">
+          <li>Autonomous path following</li>
+          <li>Real-time direction correction</li>
+          <li>Low-cost robotics build</li>
+        </ul>
+        <a href="Line follower.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Arduino Sensor Integration</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: Ongoing hobby series</span>
+        <p class="project-desc">A series of Arduino experiments interfacing ultrasonic, IR, soil-moisture, and motion sensors for real-time monitoring and automation.</p>
+        <div class="project-tags skill-tags">
+          <span>Arduino Uno</span><span>Ultrasonic Sensor</span><span>Soil Moisture Sensor</span><span>PIR Sensor</span>
+        </div>
+        <ul class="project-features">
+          <li>Multi-sensor data acquisition</li>
+          <li>Distance &amp; motion detection</li>
+          <li>Soil moisture monitoring</li>
+        </ul>
+        <a href="Sensor integration.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+      <article class="project-row reveal">
+        <div class="project-row-head">
+          <h3>Password Detection System</h3>
+          <span class="project-status status-completed">Completed</span>
+        </div>
+        <span class="project-meta">Duration: 2 weeks</span>
+        <p class="project-desc">A Verilog HDL design that uses a Finite State Machine to recognize a predefined input sequence and grant access.</p>
+        <div class="project-tags skill-tags">
+          <span>Verilog HDL</span><span>FSM</span><span>Xilinx Vivado</span><span>ModelSim</span>
+        </div>
+        <ul class="project-features">
+          <li>FSM-based sequence recognition</li>
+          <li>Simulated &amp; verified design</li>
+          <li>Digital access-control logic</li>
+        </ul>
+        <a href="Password detector.html" class="project-explore">🚀 Explore Project</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="section">
+    <p class="section-eyebrow">06 — Beyond the lab</p>
+    <h2 class="section-title">Activities &amp; Volunteering</h2>
+
+    <div class="cards-stack">
+      <article class="expand-card reveal">
+        <button class="expand-header" data-accordion="activity1" aria-expanded="false">
+          <div><h3>Core Member (Inventory) — Electronics Project Club</h3></div>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="expand-body" id="activity1">
+          <div class="expand-body-inner">
+            <p>Managed inventory of electronic components, tools, and project resources, ensuring equipment availability for technical projects and workshops.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="expand-card reveal">
+        <button class="expand-header" data-accordion="activity2" aria-expanded="false">
+          <div><h3>Thorana 2025 — Volunteer</h3></div>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="expand-body" id="activity2">
+          <div class="expand-body-inner">
+            <p>Contributed to organizing NMAM Institute of Technology's major cultural and technical fest — coordination, logistics, and on-site operations.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="expand-card reveal">
+        <button class="expand-header" data-accordion="activity3" aria-expanded="false">
+          <div><h3>Lazzerena — Technical Event, Incridea 2025</h3></div>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="expand-body" id="activity3">
+          <div class="expand-body-inner">
+            <p>Assisted with event setup, participant coordination, and technical support for a flagship technical competition.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="section">
+    <p class="section-eyebrow">07 — Outside of work</p>
+    <h2 class="section-title">Hobbies &amp; Interests</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-icon">🔬</span><h3>Technology Exploration</h3></div><p class="skill-text">Exploring emerging tech across electronics, IoT, embedded systems, and AI.</p></div>
+      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-icon">🧪</span><h3>Hobby Projects</h3></div><p class="skill-text">Building practical projects to test new ideas and sharpen technical skills.</p></div>
+      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-icon">💡</span><h3>Product Design</h3></div><p class="skill-text">Turning ideas into products through prototyping and design thinking.</p></div>
+      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-icon">✂️</span><h3>Craft Work</h3></div><p class="skill-text">Creative craft activities that build patience and attention to detail.</p></div>
+      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-icon">🧭</span><h3>Leadership</h3></div><p class="skill-text">Team coordination and event management that sharpen collaboration skills.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> C T Suhas. Built with care, one prototype at a time.</p>
+    <div class="footer-socials">
+      <a href="https://github.com/" target="_blank" aria-label="GitHub">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      <a href="mailto:ctsuhas00@gmail.com" aria-label="Email">Email</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script src="script.js"></script>
-
 </body>
 </html>
+
+<link rel="stylesheet" href="mobile.css">
