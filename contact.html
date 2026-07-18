@@ -146,12 +146,10 @@
 
         <input type="tel" name="phone" placeholder="Phone Number" required>
 
-        <input type="text" name="subject" placeholder="Subject" required>
-
         <textarea name="message" rows="7" placeholder="Write your message here..." required></textarea>
 
-        <button type="submit" id="contactSubmitBtn">Send Message</button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <button type="submit">Send Message</button>
+        <p class="form-status" id="formStatus"></p>
       </form>
     </section>
 
@@ -173,120 +171,16 @@
 
 <script src="script.js"></script>
 <script>
-  /* Contact form: validation + Formspree submission + loading/success/error
-     states + duplicate-submit prevention. Progressive enhancement — if JS
-     fails to load, the form still submits normally via its action/method.
-
-     >>> YOUR FORMSPREE ENDPOINT GOES ON THE <form> TAG ABOVE, IN THE
-     >>> action="..." ATTRIBUTE (currently https://formspree.io/f/mdavabdr).
-     >>> Replace that URL with your own endpoint from formspree.io — nothing
-     >>> in this script needs to change. */
-  (() => {
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('contactSubmitBtn');
-    if (!form || !status || !submitBtn) return;
-
-    const fields = {
-      name: form.querySelector('[name="name"]'),
-      email: form.querySelector('[name="email"]'),
-      phone: form.querySelector('[name="phone"]'),
-      subject: form.querySelector('[name="subject"]'),
-      message: form.querySelector('[name="message"]')
-    };
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^[0-9+\-\s()]{7,}$/;
-
-    let isSubmitting = false;
-    const defaultBtnText = submitBtn.textContent;
-
-    const setFieldError = (field, message) => {
-      field.style.borderColor = message ? '#B4432E' : '';
-      field.style.boxShadow = message ? '0 0 0 4px rgba(180,67,46,0.12)' : '';
-    };
-
-    const validate = () => {
-      let firstInvalid = null;
-      let ok = true;
-
-      const checks = [
-        [fields.name, fields.name.value.trim().length > 1],
-        [fields.email, emailPattern.test(fields.email.value.trim())],
-        [fields.phone, phonePattern.test(fields.phone.value.trim())],
-        [fields.subject, fields.subject.value.trim().length > 2],
-        [fields.message, fields.message.value.trim().length > 9]
-      ];
-
-      checks.forEach(([field, valid]) => {
-        setFieldError(field, valid ? '' : 'invalid');
-        if (!valid){
-          ok = false;
-          if (!firstInvalid) firstInvalid = field;
-        }
-      });
-
-      if (!ok && firstInvalid) firstInvalid.focus();
-      return ok;
-    };
-
-    // Clear a field's error state as soon as the person fixes it
-    Object.values(fields).forEach(field => {
-      field.addEventListener('input', () => setFieldError(field, ''));
-    });
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      if (isSubmitting) return; // duplicate-submit guard
-
-      status.textContent = '';
-      status.style.color = '';
-
-      if (!validate()){
-        status.textContent = 'Please fill in every field correctly before sending.';
-        status.style.color = '#B4432E';
-        return;
-      }
-
-      isSubmitting = true;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
+  // Contact-form submit feedback (progressive enhancement — form still works without JS)
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (form && status){
+    form.addEventListener('submit', () => {
       status.textContent = 'Sending your message…';
-      status.style.color = '';
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok){
-          status.textContent = 'Thanks — your message is on its way. I\'ll reply soon!';
-          status.style.color = 'var(--sage-deep)';
-          form.reset();
-        } else {
-          const data = await response.json().catch(() => null);
-          const errorMsg = data && data.errors && data.errors.length
-            ? data.errors.map(err => err.message).join(', ')
-            : 'Something went wrong sending your message. Please try again.';
-          status.textContent = errorMsg;
-          status.style.color = '#B4432E';
-        }
-      } catch (err) {
-        status.textContent = 'Network error — please check your connection and try again.';
-        status.style.color = '#B4432E';
-      } finally {
-        isSubmitting = false;
-        submitBtn.disabled = false;
-        submitBtn.textContent = defaultBtnText;
-      }
     });
-  })();
+  }
 </script>
 </body>
 </html>
 
 <link rel="stylesheet" href="mobile.css">
-<header class="hero" style="min-height:52vh; padding-top:10px;"></header>
